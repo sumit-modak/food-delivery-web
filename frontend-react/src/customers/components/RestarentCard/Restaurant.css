@@ -1,0 +1,14 @@
+.productCard .textPart {
+    transition: transform 0.3s ease-out;
+  }
+.productCard:hover .textPart{
+    transform: translateY(-1rem);
+    /* padding: 0 10px; */
+    background: #191919;
+
+}
+
+.productCard:hover{
+  /* box-shadow: #000000 0px 5px 15px; */
+  
+}
