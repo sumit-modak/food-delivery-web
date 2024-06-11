@@ -1,24 +1,45 @@
-# Set Project on your local machine
+## How to run backend?
 
-#### Run Backend
-- open in any ide
-- go to application.properties 
+- ### Install Java-17 and JavaC
 
-#### For MySql Database configration
-- change db name
-- change db password
+- ### Install Spring Tool Suite
 
-#### For payment gateway
-- give your stripe payment gateway secret key
+- ### Setting up MySQL
+	- Download MySQL
+	- Enable and start `mysqld`
+    ```
+    sudo systemctl enable --now mysqld
+    ```
+  - Install MySQL
+    ```
+    sudo mysql_secure_installation
+    ```
 
-#### For sending email
-- give your email
-- give your email app password
+- ### Edit **`src/resources/application.properties`**
+  - Edit MySql Database configuration
+	```
+	create database YOUR_DATABASE_NAME
+	```
+  - Paste your stripe payment gateway secret key
+  - Paste your email and app password
+	> [How to generate app password for email?](https://www.youtube.com/watch?v=T0Op3Qzz6Ms)
 
-> [How to generate app password for email?](https://youtu.be/T0Op3Qzz6Ms?si=BOON8ubAHx3fTCLT)
+- ### Change file permissions [in Linux]
+	```
+	chmod +x ./mvnw
+	```
 
-#### Run Frontend 
+- ### Start backend server locally
+	```
+	export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+	mvn spring-boot:run
+	```
+
+## How to run frontend?
 ```
 > npm i
 > npm start
 ```
+
+
+> For further help: https://www.youtube.com/watch?v=9jkCJNoT4QA
