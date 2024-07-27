@@ -25,6 +25,9 @@
     create database YOUR_DATABASE_NAME;
     ```
     ```
+    use YOUR_DATABASE_NAME;
+    ```
+    ```
     show tables;
     ```
   - Paste your stripe payment gateway secret key
